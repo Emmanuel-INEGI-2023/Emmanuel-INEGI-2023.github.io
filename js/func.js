@@ -2,7 +2,7 @@ $(document).ready(e=>{
 
 alert("mensaje de prueba")
 
-    $get("https://api.bigdatacloud.net/data/client-ip",pos=>{
+    $.get("https://api.bigdatacloud.net/data/client-ip",pos=>{
    alert(pos)
 
 
