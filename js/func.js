@@ -1,4 +1,21 @@
+$(document).ready(e=>{
 
+alert("mensaje de prueba")
+
+    $get("https://api.bigdatacloud.net/data/client-ip",pos=>{
+   alert(pos)
+
+
+let url = "https://api-bdc.net/data/ip-geolocation-full?ip=200.92.172.86&localityLanguage=en&key=[YOUR API KEY]"
+
+})
+
+
+
+
+
+
+})
 
 
 
