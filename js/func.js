@@ -2,19 +2,12 @@ $(document).ready(e=>{
 
 alert("mensaje de prueba")
 $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d8320e530440591cb", function(data) {
-                  console.log(data);
+                  console.log(data.timezone);
               })
 
-    $.get("https://api.bigdatacloud.net/data/client-ip",pos=>{
-          console.log(pos);
-            let url = "https://api-bdc.net/data/ip-geolocation-full?ip=200.92.172.86&localityLanguage=en&key=[YOUR API KEY]"
-
-})
-
-
-
-
-
+  $.getJSON("https://screenshot.abstractapi.com/v1/?api_key=2a9f856ee13d44829f49f98bf41377f6&url=https://news.ycombinator.com", function(data) {
+      console.log(data);
+  })
 
 })
 
