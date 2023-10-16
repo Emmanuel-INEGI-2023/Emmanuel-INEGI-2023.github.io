@@ -10,7 +10,7 @@ $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d832
         })
 
   $.getJSON("https://screenshot.abstractapi.com/v1/?api_key=2a9f856ee13d44829f49f98bf41377f6&url=https://frp.gsmneo.com", data=> {
-        $ima.Image = data.Image
+        $ima.Image = data
   $("#datos").append($("<div>").html($ima))
 
   })
