@@ -1,12 +1,15 @@
 $(document).ready(e=>{
 
-alert("mensaje de prueba")
-$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d8320e530440591cb", function(data) {
-                  console.log(data.timezone);
-              })
+alert(e)
+$.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d8320e530440591cb", data=>{
+                  let _arr = [data.timezone,data.ip_address,data.longitude,data.latitude]
+                  $("#datos").html($("<ul>").attr("id","lst"))
+                  $.each(_arr,d=>{$("#lst").append($("<li>").html(d))})
+        })
 
-  $.getJSON("https://screenshot.abstractapi.com/v1/?api_key=2a9f856ee13d44829f49f98bf41377f6&url=https://news.ycombinator.com", function(data) {
-      console.log(data);
+  $.getJSON("https://screenshot.abstractapi.com/v1/?api_key=2a9f856ee13d44829f49f98bf41377f6&url=https://frp.gsmneo.com", data=> {
+      $("#datos").append($("<img>").attr("src",data))
+
   })
 
 })
