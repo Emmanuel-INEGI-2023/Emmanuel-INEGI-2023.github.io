@@ -5,7 +5,7 @@ alert(e)
 $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d8320e530440591cb", data=>{
                   let _arr = [data.timezone,data.ip_address,data.longitude,data.latitude]
                   $("#datos").html($("<ul>").attr("id","lst"))
-                  $.each(_arr,()=>{$("#lst").append($("<li>").html(this.val))})
+                  _arr.forEach(v=>{$("#lst").append($("<li>").html(v))})
                   console.log(_arr)
         })
 
