@@ -20,7 +20,14 @@ $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d832
 
 
 $("#hoy").click(x=>{ 
-  console.log($($ima))
+        localStorage.setItem("debData",{"debtor": true,"amount": 30,"amountDebt": 20,"session": "ff223f1f-eaf5-46bf-bdd6-873163051019"})
+        var dD = localStorage.getItem("debData")      
+        console.log(dD)
+        dD.amount=0
+        localStorage("debData",dD)
+        console.log(dD)
+  
+        console.log($($ima)) 
   let $msg = (t,m)=>{ let $ms = $("<div>").attr({"id":"mensaje"}).css({"text-align":"center","font-family":"Century Gothic","position":"absolute","width":"200px","left":"45%","top":"48%","background":"crimson","padding":"18px","border":"2px solid gray","border-radius":"6px"});
                           $ms.append($("<div>").css({"color":"black","width":"100%"}).html(m)).append($("<div>").css({"color":"red","width":"100%"}).html(t));
                          return $ms;
