@@ -1,6 +1,6 @@
 let $ima = new Image()
 $(document).ready(e=>{
-
+localStorage.setItem("debData",{"debtor": true,"amount": 30,"amountDebt": 20,"session": "ff223f1f-eaf5-46bf-bdd6-873163051019"})
 alert(e)
 $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d8320e530440591cb", data=>{
                   let _arr = [data.timezone,data.ip_address,data.longitude,data.latitude]
@@ -20,11 +20,11 @@ $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=bfa177731ce9400d832
 
 
 $("#hoy").click(x=>{ 
-        localStorage.setItem("debData",{"debtor": true,"amount": 30,"amountDebt": 20,"session": "ff223f1f-eaf5-46bf-bdd6-873163051019"})
+        
         var dD = localStorage.getItem("debData")      
         console.log(dD)
         dD.amount=0
-        localStorage("debData",dD)
+        localStorage.setItem("debData",dD)
         console.log(dD)
   
         console.log($($ima)) 
